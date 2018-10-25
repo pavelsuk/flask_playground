@@ -1,1 +1,3 @@
-# flask_playground
+# Flask Playground
+
+Various mini projects to learn Flask
