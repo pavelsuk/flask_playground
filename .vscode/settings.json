@@ -1,0 +1,45 @@
+{
+    "markdownlint.config": {
+        "default": true,
+        "MD007": { "indent": 4 },
+        "MD013": false,
+        "MD024":{"siblings_only":true},
+        "no-hard-tabs": false
+    },
+    "cSpell.words": [
+        "Sola",
+        "Tarek",
+        "Ziadé"
+    ],
+    "python.pythonPath": "C:\\dev\\Anaconda3\\envs\\flask\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ]
+}
