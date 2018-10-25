@@ -24,3 +24,11 @@ conda install -c conda-forge yapf
 conda install -c conda-forge flake8
 conda install -c conda-forge pytest
 ```
+
+## Additional packages
+
+(*used later in examples*)
+
+``` bash
+conda install -c conda-forge pyyaml
+```
