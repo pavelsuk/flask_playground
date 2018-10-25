@@ -25,5 +25,30 @@ def printdetails():
     return response
 
 
+@app.route('/api/person/<int:person_id>')
+def person(person_id: int):
+    ''' returns details about specific person, based on id
+    Built-in converters are
+    - string (the default, a Unicode string), int, float, path, any, and uuid.
+    
+    Arguments:
+        person_id {int}
+    Test it by:
+        curl -v http://127.0.0.1:5000/api/person/0
+        curl -v http://127.0.0.1:5000/api/person/1
+        curl -v http://127.0.0.1:5000/api/person/
+        curl -v http://127.0.0.1:5000/api/person/a
+        curl -v http://127.0.0.1:5000/api/person/-1 -> TODO doesn't work
+
+    '''
+    if (person_id > 0):
+        response = jsonify({'Name': 'Great {}'.format(person_id)})
+    elif (person_id > 0):
+        response = jsonify({'Name': 'Negative {}'.format(person_id)})  # FIXME negative number doesn't work
+    else:
+        response = jsonify({'Name': 'Zero'})
+    return response
+
+
 if __name__ == '__main__':
     app.run()
