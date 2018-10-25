@@ -31,4 +31,6 @@ conda install -c conda-forge pytest
 
 ``` bash
 conda install -c conda-forge pyyaml
+conda install -c conda-forge pyJWT
+
 ```
