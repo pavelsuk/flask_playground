@@ -3,6 +3,8 @@
 *Based on on book
 [Python Microservices Development - by Tarek Ziadé](https://www.safaribooksonline.com/library/view/python-microservices-development/9781785881114/) and [tokendealer code on github](https://github.com/Runnerly/tokendealer/tree/master/runnerly/tokendealer)*
 
+See also [pyjwt documentation](https://pyjwt.readthedocs.io/en/latest/faq.html)
+
 ## Generate private/public key
 
 You can do it on Linux distro. I tried to use git bash (MINGW64) on Windows, but it didn't work. Alternatively puttygen should also work, but it failed on win machine as well. Generating it on RPI works fine.
