@@ -3,7 +3,7 @@ Work Log:
   ✔ 2018 10 25 @started(18-10-25 10:58) @done(18-10-26 00:42) @lasted(13h44m18s)
   ✔ 2018 10 26 @started(18-10-26 10:21) @done(18-10-26 15:58) @lasted(5h37m18s)
   ✔ 2018 10 26 @started(18-10-26 21:27) @done(18-10-27 23:30) @lasted(2h3m10s)
-  ☐ 2018 10 27 @started(18-10-27 14:02)
+  ✔ 2018 10 27 @started(18-10-27 14:02) @done(18-10-27 22:51) @lasted(8h49m9s)
   ☐ continue on https://www.safaribooksonline.com/library/view/python-microservices-development/9781785881114/499dff13-73a8-40d8-b28d-ea8e5e5cfc53.xhtml
 
 
@@ -16,3 +16,4 @@ Research:
     ✔ Test token by certificate @done(18-10-26 00:18)
     ☐ Integrate it into application
     ☐ Check out https://docs.authlib.org/en/latest/specs/rfc7523.html#jwt-client-authentication and https://github.com/lepture/authlib/blob/master/docs/specs/rfc7523.rst
+    ☐ [JWT to authenticate Servers API’s](https://codeburst.io/jwt-to-authenticate-servers-apis-c6e179aa8c4e) @started(18-10-27 15:28)
