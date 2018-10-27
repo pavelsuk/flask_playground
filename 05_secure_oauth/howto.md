@@ -48,3 +48,20 @@ $ openssl rsa -in key.pem -out privkey.pem
 Enter pass phrase for key.pem:
 writing RSA key
 ```
+
+Based on [pyjwt/issues/82](https://github.com/jpadilla/pyjwt/issues/82), when getting public cert from for auth0, I have to run following command:
+
+``` bash
+openssl x509 -in certificate.cer -noout -pubkey > public_key.pem
+```
+
+or in python:
+
+``` python
+from cryptography.x509 import load_pem_x509_certificate
+from cryptography.hazmat.backends import default_backend
+
+certificate_text = open('certificate.cer', 'rb').read()
+certificate = load_pem_x509_certificate(certificate_text, default_backend())
+publickey = certificate.public_key()
+```
