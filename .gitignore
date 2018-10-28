@@ -107,3 +107,5 @@ venv.bak/
 05_secure_oauth/test/pubkey_auth0_LF.pem
 05_secure_oauth/test/public_auth0.pem
 05_secure_oauth/test/private_config.py
+06_using_oauth0.com/private_config.py
+06_using_oauth0.com/not_used/**

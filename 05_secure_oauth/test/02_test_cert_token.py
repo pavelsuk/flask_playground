@@ -2,7 +2,7 @@ import jwt
 import datetime
 import time
 # from jwt.algorithms import RSAAlgorithm
-from private_config import priv_audience, priv_issuer, priv_token
+from private_config import priv_audience, priv_issuer, priv_token, priv_token_noverify
 
 from cryptography.x509 import load_pem_x509_certificate
 from cryptography.hazmat.backends import default_backend
@@ -44,8 +44,20 @@ def read_token_256(token, pubk=PUBKEY_AUTH0, verify=True, options=None):
         audience=priv_audience,
         issuer=priv_issuer)
 
+def read_token_noverify(token):
+    return jwt.decode(
+        token,
+        algorithm='RS256',
+        verify=False)
+
+
 
 def test_token():
+    token = priv_token_noverify
+    read = read_token_noverify(token)
+    print('Token no verify {}'.format(read))
+
+    
     token = priv_token
     options = {
         'verify_signature': True,

@@ -4,6 +4,7 @@ Work Log:
   ✔ 2018 10 26 @started(18-10-26 10:21) @done(18-10-26 15:58) @lasted(5h37m18s)
   ✔ 2018 10 26 @started(18-10-26 21:27) @done(18-10-27 23:30) @lasted(2h3m10s)
   ✔ 2018 10 27 @started(18-10-27 14:02) @done(18-10-27 22:51) @lasted(8h49m9s)
+  ☐ 2018 10 28 @started(18-10-28 09:17)
   ☐ continue on https://www.safaribooksonline.com/library/view/python-microservices-development/9781785881114/499dff13-73a8-40d8-b28d-ea8e5e5cfc53.xhtml
 
 
@@ -16,4 +17,9 @@ Research:
     ✔ Test token by certificate @done(18-10-26 00:18)
     ☐ Integrate it into application
     ☐ Check out https://docs.authlib.org/en/latest/specs/rfc7523.html#jwt-client-authentication and https://github.com/lepture/authlib/blob/master/docs/specs/rfc7523.rst
-    ☐ [JWT to authenticate Servers API’s](https://codeburst.io/jwt-to-authenticate-servers-apis-c6e179aa8c4e) @started(18-10-27 15:28)
+    ✔ [JWT to authenticate Servers API’s](https://codeburst.io/jwt-to-authenticate-servers-apis-c6e179aa8c4e) @started(18-10-27 15:28) @done(18-10-27 23:02) @lasted(7h34m53s)
+    ✔ https://auth0.com/docs/architecture-scenarios/server-api @done(18-10-28 15:12)
+    ✔ https://auth0.com/docs/quickstart/backend/python/01-authorization @done(18-10-28 15:12)
+    ✔ https://github.com/auth0-samples/auth0-python-api-samples @done(18-10-28 15:12)
+    ✔ https://realpython.com/token-based-authentication-with-flask/#objectives @done(18-10-28 15:12)
+    ✔ https://blog.miguelgrinberg.com/post/restful-authentication-with-flask @done(18-10-28 15:12)
