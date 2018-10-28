@@ -184,6 +184,7 @@ def update():
     response = "Hello from a private endpoint! You are authenticated and have a scope of update:syslog."
     return jsonify(message=response)
 
+
 @APP.route("/api/readupdate")
 @cross_origin(headers=["Content-Type", "Authorization"])
 @cross_origin(headers=["Access-Control-Allow-Origin", "http://localhost:3000"])
@@ -193,6 +194,7 @@ def readupdate():
     """
     response = "Hello from a private endpoint! You are authenticated and have access to update:syslog read:syslog"
     return jsonify(message=response)
+
 
 @APP.route("/api/noaccess")
 @cross_origin(headers=["Content-Type", "Authorization"])

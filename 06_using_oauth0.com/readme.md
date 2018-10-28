@@ -7,7 +7,7 @@ Source: [auth0.com: Python API Authorization Tutorial](https://auth0.com/docs/qu
 - Create account on [oauth0.com](https://auth0.com) and follow tutorials there
 - Install following packages:
 
-```
+``` bash
 conda install -c conda-forge flask
 conda install -c conda-forge python-dotenv
 pip install python-jose-cryptodome
@@ -18,6 +18,7 @@ conda install -c conda-forge six
 ## How to test it
 
 - Get token via postman or curl:
+
 ``` bash
 curl -X POST \
   https://suk.eu.auth0.com/oauth/token \
@@ -37,13 +38,13 @@ Example of 'get_token_body.private'
 }
 ```
 
-- Copy access token to auth_bearer.private as 
+- Copy access token to auth_bearer.private as
 
-``` bash 
+``` bash
 -H  "Authorization: Bearer <your_token>"
 ```
 
-and use curl:
+and use curl to test it:
 
 ``` bash
 curl --url 'http://localhost:3010/api/update' --config auth_bearer.private
