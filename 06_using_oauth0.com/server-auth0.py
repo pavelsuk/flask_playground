@@ -68,7 +68,7 @@ def check_required_scopes(required_scopes: str):
     Args:
         required_scope (str): The scope required to access the resource
     """
-    if not(required_scopes):
+    if not (required_scopes):
         return True
 
     token = get_token_auth_header()
@@ -138,7 +138,7 @@ def requires_auth(scopes=None):
                         " token."
                     }, 401)
 
-                if(not check_required_scopes(scopes)):
+                if (not check_required_scopes(scopes)):
                     raise AuthError({
                         "code": "invalid scope",
                         "description": "No access to scope"
@@ -174,15 +174,28 @@ def private():
     return jsonify(message=response)
 
 
-@APP.route("/api/update")
+@APP.route("/api/update", methods=['PUT'])
 @cross_origin(headers=["Content-Type", "Authorization"])
 @cross_origin(headers=["Access-Control-Allow-Origin", "http://localhost:3000"])
 @requires_auth('update:syslog')
 def update():
+    req_data = request.get_json()
     """A valid access token and an appropriate scope are required to access this route
     """
-    response = "Hello from a private endpoint! You are authenticated and have a scope of update:syslog."
-    return jsonify(message=response)
+    response = "Hello from a private endpoint! You are authenticated and have a scope of update:syslog. Values are\
+     Key1: {}, Key2: {}".format(req_data['key1'], req_data['key2'])
+    return jsonify(message=response, key1_resp=req_data['key1'], key2_resp=req_data['key2'])
+
+
+@APP.route("/api/read")
+@cross_origin(headers=["Content-Type", "Authorization"])
+@cross_origin(headers=["Access-Control-Allow-Origin", "http://localhost:3000"])
+@requires_auth(' read:syslog')
+def read():
+    """A valid access token and an appropriate scope are required to access this route
+    """
+    response = "Hello from a private endpoint! You are authenticated and have access to read:syslog"
+    return jsonify(message=response, data={"key1": "value1", "key2": "value2"})
 
 
 @APP.route("/api/readupdate")

@@ -4,11 +4,11 @@ import datetime
 
 
 class ClientAouth(object):
-    ''' Client for accessing API from server side    
+    ''' Client for accessing API from server side
     '''
 
     def __init__(self,
-                 server_url='http://localhost:3100/api/',
+                 server_url='http://localhost:3010/api/{}',
                  auth_url='https://suk.eu.auth0.com/oauth/token',
                  get_token_body_fname='get_token_body.private',
                  access_token_fname='access_token.private'):
@@ -64,7 +64,47 @@ class ClientAouth(object):
 
         print('self._access_token = {}'.format(self._access_token))
 
+    def read_data(self):
+        ''' reads data via API
+            Simulates behavior of
+            curl --url 'http://localhost:3010/api/read' --config auth_bearer.private
+        '''
+        self.refresh_auth_token()
+
+        headers = {
+            'Content-Type': 'application/json',
+            'cache-control': 'no-cache',
+            'Authorization': 'Bearer {}'.format(self._access_token)
+        }
+        api_endpoint = self._server_url.format('read')
+        print('api_endpoint: {}'.format(api_endpoint))
+        r = requests.get(api_endpoint, headers=headers)
+        resp = r.json()
+        print(resp)
+
+    def put_data(self):
+        ''' reads data via API
+            Simulates behavior of
+            curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" --url\
+            'http://localhost:3010/api/update' --config auth_bearer.private -X PUT
+
+        '''
+        self.refresh_auth_token()
+
+        headers = {
+            'Content-Type': 'application/json',
+            'cache-control': 'no-cache',
+            'Authorization': 'Bearer {}'.format(self._access_token)
+        }
+        api_endpoint = self._server_url.format('update')
+        print('api_endpoint: {}'.format(api_endpoint))
+        r = requests.put(api_endpoint, headers=headers, json={"key1": "Hi", "key2": "there"})
+        resp = r.json()
+        print(resp)
+
 
 if __name__ == "__main__":
     cl = ClientAouth()
-    cl.refresh_auth_token()
+    # cl.refresh_auth_token()
+    # cl.read_data()
+    cl.put_data()

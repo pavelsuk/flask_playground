@@ -47,7 +47,8 @@ Example of 'get_token_body.private'
 and use curl to test it:
 
 ``` bash
-curl --url 'http://localhost:3010/api/update' --config auth_bearer.private
+curl -d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json" --url 'http://localhost:3010/api/update' --config auth_bearer.private -X PUT
+curl --url 'http://localhost:3010/api/read' --config auth_bearer.private
 curl --url 'http://localhost:3010/api/readupdate' --config auth_bearer.private
 curl --url 'http://localhost:3010/api/noaccess' --config auth_bearer.private
 ```

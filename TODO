@@ -5,16 +5,16 @@ Work Log:
   ✔ 2018 10 26 @started(18-10-26 21:27) @done(18-10-27 23:30) @lasted(2h3m10s)
   ✔ 2018 10 27 @started(18-10-27 14:02) @done(18-10-27 22:51) @lasted(8h49m9s)
   ✔ 2018 10 28 @started(18-10-28 09:17) @done(18-10-28 17:55) @lasted(8h38m14s)
-  ☐ 2018 11 11 @started(18-11-11 19:51)
+  ✔ 2018 11 11 @started(18-11-11 19:51) @done(18-11-11 23:11) @lasted(3h20m25s)
   ☐ continue on https://www.safaribooksonline.com/library/view/python-microservices-development/9781785881114/499dff13-73a8-40d8-b28d-ea8e5e5cfc53.xhtml
 
 
 Research:
-  ☐ json PUT method
-    ☐ client side 
+  ✔ json PUT method @done(18-11-11 23:11)
+    ✔ client side @done(18-11-11 23:11)
       ✔ refresh token @started(18-11-11 20:01) @done(18-11-11 21:58) @lasted(1h57m22s)
-      ☐ read value through GET
-      ☐ send json through PUT
+      ✔ read value through GET @started(18-11-11 21:58) @done(18-11-11 23:00) @lasted(1h2m44s)
+      ✔ send json through PUT @started(18-11-11 23:00) @done(18-11-11 23:09) @lasted(9m36s)
     ✔ server side @done(18-10-25 20:58)
   ☐ Oauth tokens (server 2 server)
     ✔ Test shared secret @done(18-10-26 00:17)
