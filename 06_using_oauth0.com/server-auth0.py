@@ -182,9 +182,9 @@ def update():
     req_data = request.get_json()
     """A valid access token and an appropriate scope are required to access this route
     """
-    response = "Hello from a private endpoint! You are authenticated and have a scope of update:syslog.\n Values are\
-     \nKey1: {}\nKey2: {}".format(req_data['key1'], req_data['key2'])
-    return jsonify(message=response)
+    response = "Hello from a private endpoint! You are authenticated and have a scope of update:syslog. Values are\
+     Key1: {}, Key2: {}".format(req_data['key1'], req_data['key2'])
+    return jsonify(message=response, key1_resp=req_data['key1'], key2_resp=req_data['key2'])
 
 
 @APP.route("/api/read")
