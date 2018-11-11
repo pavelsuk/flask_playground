@@ -4,7 +4,7 @@ import datetime
 
 
 class ClientAouth(object):
-    ''' Client for accessing API from server side    
+    ''' Client for accessing API from server side
     '''
 
     def __init__(self,
