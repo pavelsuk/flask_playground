@@ -110,3 +110,4 @@ venv.bak/
 06_using_oauth0.com/private_config.py
 06_using_oauth0.com/not_used/**
 *.private
+.vscode/settings.json
